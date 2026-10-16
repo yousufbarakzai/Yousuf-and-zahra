@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yousuf ❤️ Zahra</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Tahoma, sans-serif;
+    background: linear-gradient(135deg, #19051f, #570b46, #bd286b);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    padding: 35px 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.heart {
+    font-size: 85px;
+    animation: beat 1s infinite;
+    margin: 20px 0;
+    filter: drop-shadow(0 0 20px #ff4d9d);
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+h1 {
+    font-size: 29px;
+    color: #ffb6d9;
+    text-shadow: 0 0 15px #ff1688;
+}
+
+p {
+    font-size: 17px;
+    line-height: 2;
+}
+
+button {
+    border: none;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff2d88, #ff6aab);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff3c91;
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+.card {
+    background: rgba(255,255,255,.10);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 25px;
+    padding: 22px;
+    margin-top: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.hidden {
+    display: none;
+}
+
+.floating {
+    position: fixed;
+    bottom: -30px;
+    animation: floatUp 7s linear forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+#letter {
+    white-space: pre-line;
+    color: #ffe1ef;
+    line-height: 2.2;
+}
+
+.name {
+    color: #ffb6d9;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heart">❤️</div>
+
+    <h1>برای قشنگ‌ترین دختر دنیا 💗</h1>
+
+    <p>
+        سلام زهرا جانم! 🥹💕<br>
+        یک نفر اینجا هست که می‌خواد چیزی بهت بگه...
+    </p>
+
+    <div class="card">
+        <h2>💌 زهرا، آماده‌ای؟</h2>
+        <p>این پیام فقط برای تو ساخته شده، دختر خاص زندگی من! ❤️</p>
+        <button onclick="startLove()">باز کن عزیزم 💋</button>
+    </div>
+
+    <div id="love" class="card hidden">
+        <h2>😭❤️ زهراااا!</h2>
+        <p>
+            تو خودت گفتی می‌خوای دیوونه‌م بشی...
+            <br>
+            ولی یک چیزی رو نمی‌دونی! 🥹
+        </p>
+        <button onclick="showLetter()">نامه مخفی من 💌</button>
+    </div>
+
+    <div id="letterBox" class="card hidden">
+        <h2>💗 از طرف یوسف برای زهرا</h2>
+        <p id="letter"></p>
+        <button onclick="showQuestion()">یک سؤال آخر 😳❤️</button>
+    </div>
+
+    <div id="question" class="card hidden">
+        <h2>زهرا جانم! 🥹💍</h2>
+        <p>حاضری با هم کلی خاطره قشنگ بسازیم و همیشه هوای همدیگه رو داشته باشیم؟ ❤️</p>
+        <button onclick="yes()">بلی، یوسفم ❤️</button>
+        <button onclick="maybe()">باید بغلم کنی اول 😂💋</button>
+        <p id="answer"></p>
+    </div>
+
+    <p style="margin-top:35px;color:#ffb6d9">
+        Yousuf ❤️ Zahra<br>
+        یک داستان قشنگ که هنوز ادامه دارد... ♾️
+    </p>
+
+</div>
+
+<script>
+function startLove() {
+    document.getElementById("love").classList.remove("hidden");
+    document.getElementById("love").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+    burst();
+}
+
+function showLetter() {
+    document.getElementById("letterBox").classList.remove("hidden");
+
+    document.getElementById("letter").textContent =
+`زهرا جانم! ❤️🥹
+
+وقتی گفتی می‌خوای دیوونه‌م بشی،
+لبخند زدم و با خودم گفتم:
+
+ای کاش می‌دونستی که خودت چقدر
+آروم‌آروم توی قلبم جا باز کردی! 💗
+
+شاید نتونم همیشه بهترین حرف‌ها رو بزنم،
+ولی دوست دارم وقتی ناراحتی، کنارت باشم،
+وقتی خوشحالی، باهات بخندم،
+و وقتی دنیا خسته‌ات می‌کنه،
+دلیلی باشم برای لبخند زدنت. 🫂❤️
+
+زهرا، تو برای من فقط یک اسم نیستی؛
+اسم تو همون چیزیه که دیدنش
+می‌تونه لبخند بیاره روی لب‌هام. 💋
+
+از طرف یوسف،
+برای دختر خاص زندگی‌اش... ❤️‍🔥`;
+
+    document.getElementById("letterBox").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    burst();
+}
+
+function showQuestion() {
+    document.getElementById("question").classList.remove("hidden");
+    document.getElementById("question").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
+function yes() {
+    document.getElementById("answer").innerHTML =
+    "آخخخخ قلبم! 😭❤️ زهرا، یک بغل مجازی برای تو! 🫂💋<br>Yousuf ❤️ Zahra ♾️";
+    burst();
+}
+
+function maybe() {
+    document.getElementById("answer").innerHTML =
+    "قبولللل 😂🫂❤️ اول یک بغل محکم، بعد ادامه داستان عاشقی‌مون! 💋";
+    burst();
+}
+
+function burst() {
+    for (let i = 0; i < 22; i++) {
+        const h = document.createElement("div");
+        h.className = "floating";
+        h.innerHTML = ["❤️","💗","💖","💕","💋","✨"][Math.floor(Math.random()*6)];
+        h.style.left = Math.random() * 100 + "vw";
+        h.style.fontSize = (20 + Math.random() * 25) + "px";
+        h.style.animationDuration = (3 + Math.random() * 4) + "s";
+        document.body.appendChild(h);
+        setTimeout(() => h.remove(), 7500);
+    }
+}
+
+setInterval(() => {
+    const h = document.createElement("div");
+    h.className = "floating";
+    h.innerHTML = "💗";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = "22px";
+    h.style.animationDuration = "7s";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 7000);
+}, 900);
+</script>
+
+</body>
+</html>
